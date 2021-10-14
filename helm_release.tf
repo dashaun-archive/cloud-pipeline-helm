@@ -4,7 +4,7 @@ resource "helm_release" "concourse" {
   chart      = "concourse"
 
   values = [
-    file("concourse/values.yaml")
+    file("./concourse/values.yaml")
   ]
 }
 
