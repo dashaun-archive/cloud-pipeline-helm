@@ -9,4 +9,4 @@ spec:
     service:
       name: concourse-web
       port:
-        name: https
+        name: atc
