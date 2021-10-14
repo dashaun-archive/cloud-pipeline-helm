@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: concourse-web
+  labels:
+    app: concourse-web
+spec:
+  defaultBackend:
+    service:
+      name: concourse-web
+      port:
+        name: https

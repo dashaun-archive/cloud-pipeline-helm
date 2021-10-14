@@ -1,6 +1,6 @@
 resource "helm_release" "concourse" {
   name       = "concourse"
-  repository = "https://charts.bitnami.com/bitnami"
+  repository = "https://concourse-charts.storage.googleapis.com/"
   chart      = "concourse"
 }
 

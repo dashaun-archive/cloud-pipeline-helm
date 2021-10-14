@@ -1,0 +1,11 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: basic
+spec:
+  routes:
+    - conditions:
+        - prefix: /concourse
+      services:
+        - name: concourse-web
+          port: 80
