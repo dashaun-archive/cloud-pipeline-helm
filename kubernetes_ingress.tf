@@ -1,7 +1,6 @@
 resource "kubernetes_ingress" "example_ingress" {
   metadata {
     name = "redisgeek-ingress"
-    namespace = "default"
     annotations = {
       "kubernetes.io/ingress.class" = "addon-http-application-routing"
     }
