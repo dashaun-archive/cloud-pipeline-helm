@@ -1,11 +1,16 @@
 apiVersion: projectcontour.io/v1
 kind: HTTPProxy
 metadata:
-  name: basic
+  name: redisgeek
+  labels:
+    app: concourse-web
+  namespace: default
 spec:
+  virtualhost:
+    fqdn: concourse.redisgeek.com
   routes:
     - conditions:
-        - prefix: /concourse
+        - prefix: /
       services:
         - name: concourse-web
-          port: 80
+          port: 8080
